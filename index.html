@@ -9,17 +9,19 @@
     <div class="mypanel"></div>
 
     <script>
+      let part = "NCA1B150-0100";
+      console.log(part);
+
       $.getJSON(
-        "https://usind-tac-02.smcusa.com:8081/edmvalidator/validator/erp/us/NCA1B150-0100?mediaType=json",
+        `http://usind-tac-02.smcusa.com:8081/edmvalidator/validator/erp/us/${part}?mediaType=json`,
         function (data) {
           console.log(`Function Starting`);
-          var text = `Parent: `;
 
           $(".mypanel").html(text);
         }
       );
     </script>
 
-    <button>i'm a button</button>
+    <button>still a button</button>
   </body>
 </html>
