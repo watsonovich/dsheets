@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>read JSON from URL 1</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+
+  <body>
+    <div class="mypanel"></div>
+
+    <script>
+      $.getJSON(
+        "http://usind-tac-02.smcusa.com:8081/edmvalidator/validator/erp/us/NCA1B150-0100?mediaType=json",
+        function (data) {
+          console.log(`Function Starting`);
+          var text = `Parent: `;
+
+          $(".mypanel").html(text);
+        }
+      );
+    </script>
+
+    <button>i'm a button</button>
+  </body>
+</html>
